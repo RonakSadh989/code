@@ -1,0 +1,295 @@
+body {
+  /* background-color: rgba(232, 232, 232, 0.838); */
+  overflow: auto;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: rgba(93,94,94,255);
+  border-radius: 8px;
+}
+body::-webkit-scrollbar{
+  background-color: rgba(50,51,52,255);
+  width: 10px;
+}
+
+
+nav {
+  display: flex;
+  /* background-color: aqua; */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: white;
+}
+.upper {
+  /* position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0; */
+  position: relative;
+  height: 25vh;
+  background-color: rgba(232,232,232,255);
+  width: 100%;
+  border-radius: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  height: 60px;
+
+  align-items: center;
+  margin-left: 70vh;
+}
+nav ul li {
+  margin: 10px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  width: 50vw;
+}
+.title h2 {
+  margin: 20px;
+  font-size: 30px;
+}
+.middle {
+  /* background-color: aqua; */
+  height: 5vh;
+}
+.middle marquee {
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  direction: ltr;
+}
+
+.lower {
+  height: 500px;
+}
+.button {
+  background: rgb(255, 232, 28);
+  border: 2px solid rgb(255, 232, 28);
+  border-radius: 10px;
+  width: 100px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.395);
+}
+.label {
+  border-radius: 5px;
+  border-width: 1px;
+}
+.image {
+  /* width: 10px;
+  height: 10px; */
+  border-radius: 10px;
+}
+#img1 {
+  width: 60px;
+  margin-left: 20px;
+  border-radius: 30px;
+}
+.timing {
+  width: 32vw;
+  border-radius: 15px;
+}
+#app {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: larger;
+}
+#imgfooter {
+  height: 30px;
+}
+.foot1 {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+#footspan {
+  margin-left: 10px;
+  color: grey;
+}
+.footer {
+  margin: 20px;
+}
+/* From uiverse.io by @gagan-gv */
+.spinner {
+  height: 50px;
+  width: max-content;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: monospace;
+  letter-spacing: 1em;
+  color: #f5f5f5;
+  filter: drop-shadow(0 0 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ 
+ .spinner span {
+  animation: loading6454 1.75s ease infinite;
+ }
+ 
+ .spinner span:nth-child(2) {
+  animation-delay: 0.25s;
+ }
+ 
+ .spinner span:nth-child(3) {
+  animation-delay: 0.5s;
+ }
+ 
+ .spinner span:nth-child(4) {
+  animation-delay: 0.75s;
+ }
+ 
+ .spinner span:nth-child(5) {
+  animation-delay: 1s;
+ }
+ 
+ .spinner span:nth-child(6) {
+  animation-delay: 1.25s;
+ }
+ 
+ .spinner span:nth-child(7) {
+  animation-delay: 1.5s;
+ }
+ .spinner span:nth-child(8) {
+  animation-delay: 0.25s;
+ }
+ 
+ .spinner span:nth-child(9) {
+  animation-delay: 0.5s;
+ }
+ 
+ .spinner span:nth-child(10) {
+  animation-delay: 0.75s;
+ }
+ 
+ .spinner span:nth-child(11) {
+  animation-delay: 1s;
+ }
+ 
+ .spinner span:nth-child(12) {
+  animation-delay: 1.25s;
+ }
+ 
+ @keyframes loading6454 {
+  0%, 100% {
+   transform: translateY(0);
+  }
+ 
+  50% {
+   transform: translateY(-10px);
+  }
+ }
+.spinner{
+  margin: 20px;
+}
+/* From uiverse.io */
+.fancy {
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 20px;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+ }
+ 
+ .fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+ }
+ 
+ .fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+ }
+ 
+ .fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy:hover {
+  color: white;
+  background: rgb(28, 27, 27);
+ }
+ 
+ .fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+ }
+ 
+ .fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+ }
+ 
+ .fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+ }
+ 
+ .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+ }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add some styles to the website */
+      #news-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .news-article {
+        width: 30%;
+        padding: 20px;
+        text-align: center;
+      }
+      .news-article h2 {
+        margin-top: 0;
+      }
+      .news-article img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+      .news-article p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .news-article a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="news-container"></div>
+    <script>
+      // Request URL for the NewsAPI
+      const apiURL = "https://newsapi.org/v2/top-headlines?country=in&apiKey=247218c92d0b40c4b0573fe04571ab7c";
+      
+      // Function to fetch data from the NewsAPI
+      async function getNewsData() {
+        try {
+          const response = await fetch(apiURL);
+          const data = await response.json();
+          return data.articles;
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      
+      // Function to display the news articles
+      async function displayNews() {
+        const newsData = await getNewsData();
+        const newsContainer = document.getElementById("news-container");
+        
+        for (const article of newsData) {
+          const articleEl = document.createElement("div");
+          articleEl.classList.add("news-article");
+          articleEl.innerHTML = `
+            <h2>${article.title}</h2>
+            <img src="${article.urlToImage}" alt="${article.title}">
+            <p>${article.description}</p>
+            <a href="${article.url}" target="_blank">Read More</a>
+          `;
+          newsContainer.appendChild(articleEl);
+        }
+      }
+      
+      // Call the displayNews function to fetch and display the news articles
+      displayNews();
+    </script>
+  </body>
+</html>

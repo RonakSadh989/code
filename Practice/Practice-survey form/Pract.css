@@ -1,0 +1,66 @@
+body {
+  background-color: #a9d7d1;
+}
+.head {
+  text-align: center;
+}
+.form {
+  width: 80vw;
+  /* height: 80vh; */
+  background-color: white;
+  margin-left: 100px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+}
+.name {
+  margin-top: 40px;
+}
+.input1 {
+  margin-left: 18px;
+}
+.email {
+  margin-top: 40px;
+}
+.input2 {
+  margin-left: 16px;
+}
+.age {
+  margin-top: 40px;
+}
+.input3 {
+  margin-left: 16px;
+}
+.role {
+  margin-top: 40px;
+  margin-right: 290px;
+}
+.recom {
+  margin-top: 40px;
+  display: flex;
+}
+.recomtext {
+  margin-left: 40px;
+}
+.divrecom {
+  align-items: center;
+  text-align: start;
+  margin-left: 20px;
+}
+.like {
+  margin-top: 40px;
+  margin-right: 135px;
+}
+#select1 {
+  margin-left: 20px;
+}
+.future {
+  margin-top: 40px;
+  display: flex;
+  margin-left: 110px;
+}
+.divfuture {
+  align-items: center;
+  text-align: start;
+  margin-left: 20px;
+}

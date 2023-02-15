@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+}
+.left{
+    /* width: 50vw; */
+    width: auto;
+}
+.right{
+    /* width: 50vw; */
+    width: auto;
+    float: right;
+}
+.navul{
+    list-style-type: none;
+    display: flex;
+    
+
+}
+.nav{
+    display: flex;
+    width: 100vw;
+    
+}
+footer{
+    display: flex;
+    margin-top: 30vh;
+}
+.navul1{
+    list-style-type: none;
+    display: flex;
+    /* margin-left: 24em; */
+    /* overflow: auto; */
+}
+
+.navul li{
+    
+    margin-left: 20px
+}
+.navul1 li{
+    
+    margin-left: 20px
+    
+}
+.footul li{
+    
+    margin-left: 20px
+}
+.footul1 li{
+    
+    margin-left: 20px
+}
+.footul{
+    list-style-type: none;
+    display: flex;
+}
+.footul1{
+    list-style-type: none;
+    display: flex;
+    margin-left: 63vw;
+}
+.gul{
+    list-style-type: none;
+    display: flex;
+    height: 6vh;
+}
+.g{
+    color: rgb(45, 187, 234);
+}
+.o{
+    color: rgb(234, 54, 54);
+}
+.o2{
+    color: rgb(229, 229, 81);
+}
+.g2{
+    color: rgb(45, 187, 234);
+}
+.l{
+    color: rgb(0, 151, 5);
+}
+.e{
+    color: rgb(234, 54, 54);
+}
+.google{
+    /* margin-top: 35vh; */
+    margin-left: 40vw;
+    font-size: 90px;
+    font-weight: bolder;
+    
+}
+input{
+    margin-left: 39vw;
+    height: 20px;
+    width: 27vw;
+    border-radius: 8px;
+    border: 1px;
+    box-shadow: 2px 2px 5px rgb(151, 151, 151);
+
+
+}

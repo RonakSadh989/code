@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="ip()">
+    <div class="main1">
+      <!-- <div class="container1"> -->
+      <div class="weatherdiv">
+        <div class="weather">
+          <p>Get Weather</p>
+          <input
+            class="weather-input"
+            placeholder="Enter City name"
+            id="cityname"
+          />
+          <br />
+          <div class="submit-btn" onclick="load()">Get</div>
+        </div>
+        <div class="get" id="get">
+          <div class="card">
+            <div class="align">
+              <span class="red"></span>
+              <span class="yellow"></span>
+              <span class="green"></span>
+            </div>
+
+            <h1 id="cityinfo">Weather</h1>
+            <p id="info"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

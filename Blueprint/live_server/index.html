@@ -1,0 +1,362 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/THDF4BG/Alarm-clock.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        animation: 0.7s 1 fade ease-out;
+      }
+      @keyframes fade {
+        from {
+          background-color: grey;
+          transform: translateY(-5vh);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0vh);
+          background-color: white;
+          opacity: 1;
+        }
+      }
+
+      .main {
+        display: flex;
+        margin-left: 5vw;
+      }
+      .main_name {
+        font-size: 4em;
+        transition: 0.5s;
+      }
+
+      .left-down {
+        width: 35vw;
+      }
+
+      .btn1 {
+        border-radius: 20px;
+        color: #4276fe;
+        padding: 10px;
+        width: 12vw;
+        border-color: #4276fe;
+        transition: 0.3s;
+      }
+      .btn1:hover {
+        background-color: #4276fe;
+        color: white;
+        border: 0px;
+        box-shadow: 0px 0px 20px rgb(161, 161, 161);
+        transform: translateY(-0.3vw);
+      }
+      .clock {
+        background-color: #4276fe;
+        border: 0px;
+        animation: blob 4s infinite;
+      }
+      @keyframes blob {
+        0%,
+        100% {
+          border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+        }
+
+        33% {
+          border-radius: 42% 28% 48% 48% / 28% 28% 72% 72%;
+        }
+        66% {
+          border-radius: 100% 56% 56% 56% l 100% 50% 56% 56%;
+        }
+      }
+      .clock {
+        margin-left: 20vw;
+        height: 50vh;
+        transition: 0.5s;
+      }
+      .clock:hover {
+        transform: translateY(-1vw);
+      }
+      .main-name {
+        text-shadow: 10px 5px 40px rgb(161, 161, 161);
+        font-size: 3em;
+      }
+      .time {
+        /* width: 100vw; */
+
+        border-radius: 20px;
+
+        margin: 2vw;
+        display: grid;
+        padding: 1vw;
+        /* grid-template-columns: auto auto auto auto; */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .time {
+        background-image: linear-gradient(
+          90deg,
+          #eee 0%,
+          #eee 40%,
+          #ddd 50%,
+          #ddd 55%,
+          #eee 65%,
+          #eee 100%
+        );
+        background-size: 400%;
+        animation: skeleton 2.5s infinite;
+      }
+
+      @keyframes skeleton {
+        from {
+          background-position: 100%;
+        }
+        to {
+          background-position: 0%;
+        }
+      }
+      #mt2 {
+        margin-left: 80vw;
+      }
+
+      .timing {
+        width: 22vw;
+        border-radius: 15px;
+        height: 70vh;
+        margin-bottom: 2vh;
+      }
+      .timing:hover {
+        animation: shake 0.3s;
+      }
+      @keyframes shake {
+        25% {
+          transform: translateX(4px);
+        }
+        50% {
+          transform: translateX(-4px);
+        }
+        75% {
+          transform: translateX(4px);
+        }
+      }
+      @media screen and (max-width: 500px) {
+        body {
+          overflow-x: hidden;
+        }
+        .time {
+          grid-template-columns: 1fr;
+          width: auto;
+          justify-items: center;
+        }
+
+        nav {
+          visibility: collapse;
+        }
+        .main {
+          width: 50vw;
+        }
+        .btn1 {
+          width: 100px;
+        }
+        .date {
+          visibility: hidden;
+          position: absolute;
+          width: 0px;
+          height: 0px;
+        }
+        .main {
+          height: 60vw;
+        }
+        .left-up {
+          width: 80vw;
+        }
+        .left-down {
+          width: 90vw;
+        }
+        .timing {
+          width: 85vw;
+          height: 65vh;
+        }
+
+        .btn1:hover {
+          background-color: #4276fe;
+          color: white;
+          border: 0px;
+          box-shadow: 0px 0px 20px rgb(161, 161, 161);
+          transform: translateY(-0.3vw);
+        }
+        .child {
+          visibility: hidden;
+          position: absolute;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="date">
+      <p id="mt2"></p>
+    </div>
+    <div class="main">
+      <div class="left">
+        <div class="left-up">
+          <p class="main-name" style="font-weight: bolder" id="head1">
+            Maantra Time
+          </p>
+        </div>
+        <div class="left-down">
+          <p style="font-size: 10px">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+            pariatur aliquid tempore id nam ipsam obcaecati tempora
+            necessitatibus ad temporibus iste asperiores maxime repellendus
+            deserunt natus, laudantium laboriosam reiciendis molestias. Dolores
+            tempore aut est.
+          </p>
+        </div>
+        <button class="btn1" id="btn1">Download</button>
+      </div>
+      <div class="right" id="right">
+        <img
+          src="https://i.ibb.co/THDF4BG/Alarm-clock.png"
+          alt=""
+          class="clock"
+        />
+      </div>
+    </div>
+
+    <div class="time">
+      <img src="" alt="" class="timing" id="month" />
+      <img
+        src="https://i.ibb.co/JRx6pn4/jan.jpg"
+        alt="jan"
+        class="timing child"
+        id="1"
+      />
+      <img
+        src="https://i.ibb.co/C1VWcVY/feb.jpg"
+        alt="feb"
+        class="timing child"
+        id="2"
+      />
+      <img src="https://i.ibb.co/VmWmh1s/mar.jpg" class="timing child" id="3" />
+      <img src="https://i.ibb.co/1MW90G0/arp.jpg" class="timing child" id="4" />
+      <img src="https://i.ibb.co/W0rFYXM/may.jpg" class="timing child" id="5" />
+      <img src="https://i.ibb.co/yNy8jG7/jun.jpg" class="timing child" id="6" />
+      <img src="https://i.ibb.co/WD4G4n7/jul.jpg" class="timing child" id="7" />
+      <img src="https://i.ibb.co/Hqzr4Fq/aug.jpg" class="timing child" id="8" />
+      <img src="https://i.ibb.co/Nj6LJNd/sep.jpg" class="timing child" id="9" />
+      <img
+        src="https://i.ibb.co/bd8x69H/oct.jpg"
+        class="timing child"
+        id="10"
+      />
+      <img
+        src="https://i.ibb.co/PTs8hSz/nov.jpg"
+        class="timing child"
+        id="11"
+      />
+    </div>
+    <script>
+      // d = prompt("Your name");
+      //  const name2 = document.getElementById("name1");
+      //  (name2.innerHTML = ("Hello" +" " + d));
+
+      var options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      };
+      let myDate = new Date();
+      const mt1 = document.getElementById("mt2");
+
+      mt1.innerHTML = myDate.toLocaleDateString("en-US", options);
+
+      let mm = myDate.getMonth();
+
+      let month1 = document.getElementById("month");
+
+      let no = mm + 1;
+      let href = document.getElementById(no).src;
+
+      month.src = href;
+
+      if (mm == 0) {
+        month1.remove();
+      }
+
+      let head = document.getElementById("head1");
+
+      setTimeout(() => {
+        head.innerText = "Maantra Tim";
+      }, "2000");
+
+      setTimeout(() => {
+        head.innerText = "Maantra Ti";
+      }, "3000");
+      setTimeout(() => {
+        head.innerText = "Maantra T";
+      }, "4000");
+      setTimeout(() => {
+        head.innerText = "Maantra";
+      }, "5000");
+      setTimeout(() => {
+        head.innerText = "Maantr";
+      }, "6000");
+      setTimeout(() => {
+        head.innerText = "Maantr";
+      }, "7000");
+      setTimeout(() => {
+        head.innerText = "Maant";
+      }, "8000");
+      setTimeout(() => {
+        head.innerText = "Maan";
+      }, "9000");
+      setTimeout(() => {
+        head.innerText = "Maa";
+      }, "10000");
+      setTimeout(() => {
+        head.innerText = "Ma";
+      }, "11000");
+      setTimeout(() => {
+        head.innerText = "M";
+      }, "12000");
+      setTimeout(() => {
+        head.innerText = "मां";
+      }, "13000");
+      setTimeout(() => {
+        head.innerText = "मांत्रा:";
+      }, "14000");
+      setTimeout(() => {
+        head.innerText = "मांत्रा: स";
+      }, "15000");
+      setTimeout(() => {
+        head.innerText = "मांत्रा: सम";
+      }, "16000");
+      setTimeout(() => {
+        head.innerText = "मांत्रा: समय";
+      }, "17000");
+
+      const mediaQuery = window.matchMedia("(max-width: 500px)");
+      // Check if the media query is true
+      if (mediaQuery.matches) {
+        document.getElementById("right").remove();
+      }
+
+      let down = document.getElementById("btn1");
+      down.setAttribute("onclick", "location.href=" + "'" + href + "'");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Pract.css" />
+   
+  </head>
+  <body>
+    <div class="head">
+      <h1>Survey Form</h1>
+    </div>
+    <form class="form">
+      <span>This is a Survey Form for People</span>
+      <div class="name">
+        *Name:
+        <input type="text" placeholder="Enter your name" class="input1" />
+      </div>
+      <div class="email">
+        *E-mail:
+        <input type="text" placeholder="Enter your name" class="input2" />
+      </div>
+      <div class="age">
+        *Age:
+        <input type="text" placeholder="Enter your name" class="input3" />
+      </div>
+
+      <div class="role">
+        <label for="select1">
+          Which option best describes your current role?</label
+        >
+
+        <select id="select1">
+          <option value="">Select one option</option>
+          <option value="Student">Student</option>
+          <option value="Teacher">Teacher</option>
+          <option value="Buisnessman">Buisenssman</option>
+          <option value="Employee">Employee</option>
+        </select>
+      </div>
+      <div class="recom">
+        <span class="recomtext">
+          How likely is that you would recommend it to a friend?</span
+        >
+        <div class="divrecom">
+          <label><input type="radio" />Definitely</label>
+          <br />
+          <label><input type="radio" />Maybe</label>
+          <br />
+          <label><input type="radio" />Not sure</label>
+        </div>
+      </div>
+      <div class="like">
+        <label for="select1">What do you like most:</label>
+
+        <select id="select1">
+          <option value="">Select one option</option>
+          <option value="Coding">Coding</option>
+          <option value="Teaching">Teaching</option>
+          <option value="Marketi ng">Marketing</option>
+          <option value="Job">Job</option>
+        </select>
+      </div>
+      <div class="future">
+        <span class="futuretext">
+          Things that should be improved in the future
+        </span>
+        <div class="divfuture">
+          <label><input type="checkbox" />Front-end Projects</label>
+          <br />
+          <label><input type="checkbox" />Back-end Projects</label>
+          <br />
+          <label><input type="checkbox" />Data Visualisation</label>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

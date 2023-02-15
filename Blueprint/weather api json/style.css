@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* *{
+    outline: 1px lightgreen solid;
+
+} */
+.main1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    height: 95vh;
+}
+
+
+.weatherdiv{
+    display: flex;
+    /* flex-direction: ; */
+    align-items: center;
+    border-radius: 50px;
+    
+    /* justify-content: center;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff; */
+             height: 65vh;
+             width: 70vw;
+}
+#get{
+    margin-left: 40vw;
+    margin-bottom: 45vh;
+    /* opacity:0; */
+    display: none;
+    transition:  1s ;
+}
+#info{
+  text-align: center;
+  font-family: 'Lilita One', cursive;
+}
+.weather {
+    position: absolute;
+    height: 30vh;
+    width: 20vw;
+    padding: 20px;
+    background: rgba(237, 237, 237, 0.398);
+    backdrop-filter: blur(5px);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    border-radius: 20px;
+    color: #333;
+    box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+       transition:  1s ;
+  }
+  h1{
+    color: #414040 !important;
+  }
+  
+  .weather:after {
+    position: absolute;
+    content: "";
+    right: -10px;
+    bottom: 18px;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #1a044e;
+  }
+  
+  .weather p {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    /* letter-spacing: 4px; */
+    line-height: 28px;
+  }
+  p{
+    margin-top: 5vh;
+  }
+  
+  .weather input {
+    position: absolute;
+    bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+    padding: 10px;
+    width: 82%;
+    background: transparent;
+    transition: all .25s ease;
+  }
+  
+  .weather input:focus {
+    outline: none;
+    border-bottom: 1px solid #0d095e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+  }
+  
+  .weather .submit-btn {
+    position: absolute;
+    border-radius: 30px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 8px;
+    background-color: #0f0092;
+    color: #FFF;
+    padding: 12px 25px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    right: -10px;
+    bottom: -20px;
+    cursor: pointer;
+    transition: all .25s ease;
+    /* box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4); */
+  }
+  
+  
+  .weather .submit-btn:hover {
+    background-color: #07013d;
+    box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+  }
+  .card {
+    width: 190px;
+    height: 120px;
+    padding: 0.5rem;
+    background: rgba(237, 237, 237, 0.398);
+    border-radius: 8px;
+    /* backdrop-filter: blur(5px); */
+    position: absolute;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.440);
+    border-left: 2px  rgba(255, 255, 255, 0.545) outset;
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(3deg);
+    transition: .4s;
+    overflow: hidden;
+    color: #3e3d3d;
+    margin: auto;
+  }
+  
+  .card:hover {
+    height: 254px;
+    transform: skew(0deg);
+  }
+  
+  .align {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-self: flex-start;
+  }
+  
+  .red {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff605c;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+  
+  .yellow {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffbd44;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+  
+  .green {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00ca4e;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.280);
+  }
+  
+  .card h1{
+    text-align: center;
+    margin: 1.3rem;
+    color: rgb(218, 244, 237);
+    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+  }
+  
+  

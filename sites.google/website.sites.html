@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+    display: flex;
+    margin-left: 5vw;
+}
+.main_name{
+    font-size: 60px;
+}
+
+.left-down{
+    width: 35vw;
+    
+}
+.btn1{
+    background-color: #4276fe;
+    border-radius: 20px;
+    border: 0px;
+    color: white;
+    padding: 10px;
+    width: 12vw;
+   
+}
+.clock{
+    margin-left: 7vw;
+    height: 50vh;
+}
+.main-name{
+    
+    text-shadow: 10px 5px 40px rgb(161, 161, 161);
+    font-size: 48px;
+}
+.time{
+    /* width: 100vw; */
+   
+    border-radius: 20px;
+    
+    margin: 2vw;
+    display: grid;
+    padding: 1vw;
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+}
+.time{
+    background-image: linear-gradient(
+        90deg,
+        #eee 0%, #eee 40%,
+        #ddd 50%, #ddd 55%,
+        #eee 65%, #eee 100%
+    );
+    background-size: 400%;
+    animation: skeleton 2.5s infinite;
+}
+@keyframes skeleton{
+    from { background-position: 100%; }
+    to { background-position: 0%;
+    }
+}
+.timing{
+    width: 22vw;
+    border-radius: 15px;
+    height: 70vh;
+    margin-bottom: 2vh;
+}
+.timing:hover{
+      animation: shake .3s;
+}
+@keyframes shake{
+    25% { transform: translateX(4px)}
+    50% { transform: translateX(-4px)}
+    75% { transform: translateX(4px)}
+}
+@media screen and (max-width: 500px) {
+       .time{
+        grid-template-columns: 1fr;
+       }
+       .timing{
+        width: 80vw;
+       }
+       .right{
+        visibility: collapse;
+       }
+       nav{
+        visibility: collapse;
+        position: absolute;
+       }
+       .main{
+        width: 50vw;
+       }
+       body{
+        overflow: hidden;
+       }
+}
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/rw5zXv8/alarm-clock.jpg"
+      type="image/x-icon"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="date">
+        <p id="mt2"></p>
+      </div>
+    </nav>
+    <div class="main">
+      <div class="left">
+        <div class="left-up">
+          <p class="main-name" style="font-weight: bolder">Maantra Time</p>
+        </div>
+        <div class="left-down">
+          <p id="name1"></p>
+          <p style="font-size: 10px">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+            pariatur aliquid tempore id nam ipsam obcaecati tempora
+            necessitatibus ad temporibus iste asperiores maxime repellendus
+            deserunt natus, laudantium laboriosam reiciendis molestias. Dolores
+            tempore aut est.
+          </p>
+        </div>
+        <button class="btn1">Download</button>
+      </div>
+      <div class="right">
+        <img src="https://i.ibb.co/jhyRsQN/launch-free-template.jpg" alt="" class="clock" />
+      </div>
+    </div>
+    <div class="time">
+      <img
+        src="https://i.ibb.co/JRx6pn4/jan.jpg"
+        alt="jan"
+        class="timing"
+        id="jan"
+      />
+      <img
+        src="https://i.ibb.co/C1VWcVY/feb.jpg"
+        alt="feb"
+        class="timing"
+        id="feb"
+      />
+      <img src="https://i.ibb.co/VmWmh1s/mar.jpg" class="timing" id="mar" />
+      <img
+        src="https://i.ibb.co/1MW90G0/arp.jpg"
+        class="timing"
+        id="apr"
+      />
+      <img
+        src="https://i.ibb.co/W0rFYXM/may.jpg"
+        class="timing"
+        id="may"
+      />
+      <img
+        src="https://i.ibb.co/yNy8jG7/jun.jpg"
+        class="timing"
+        id="jun"
+      />
+      <img
+        src="https://i.ibb.co/WD4G4n7/jul.jpg"
+        class="timing"
+        id="jul"
+      />
+      <img
+        src="https://i.ibb.co/Hqzr4Fq/aug.jpg"
+        class="timing"
+        id="aug"
+      />
+      <img
+        src="https://i.ibb.co/Nj6LJNd/sep.jpg"
+        class="timing"
+        id="sep"
+      />
+      <img
+        src="https://i.ibb.co/bd8x69H/oct.jpg"
+        class="timing"
+        id="oct"
+      />
+      <img
+        src="https://i.ibb.co/PTs8hSz/nov.jpg"
+        class="timing"
+        id="nov"
+      />
+    </div>
+    <script src="shakuni.js"></script>
+  </body>
+</html>

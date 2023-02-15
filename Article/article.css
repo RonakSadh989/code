@@ -1,0 +1,26 @@
+#articlediv{
+    display: flex;
+    margin-top: 40px;
+}
+#img{
+    width: 180px;
+}
+#h2{
+    font-size: 10vh;
+    font-weight: bolder;
+}
+#hdiv{
+    width: max-content;
+}
+#imgdiv{
+    width: var(c);
+}
+#h2:hover{
+    color: gray;
+}
+body::-webkit-scrollbar{
+    background-color: rgb(157, 157, 243);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+}

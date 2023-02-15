@@ -1,0 +1,138 @@
+/* * {
+  outline: lightgreen solid 1px;
+} */
+
+.main1 {
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator {
+  display: block;
+  margin: auto;
+  border-radius: 35px;
+  width: 22vw;
+  height: 82vh;
+  background: #e0e0e0;
+  box-shadow: 11px 11px 22px #9b9b9b, -11px -11px 22px #ffffff;
+}
+.dots {
+  width: 25vw;
+  display: flex;
+  margin-left: 2vw;
+  margin-top: 2vh;
+}
+.red,
+.yellow,
+.green {
+  content: "";
+  color: #e0e0e0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50px;
+  margin: 1vh 0.3vw;
+}
+.red {
+  background-color: rgb(248, 50, 50);
+}
+.yellow {
+  background-color: rgb(255, 225, 0);
+}
+.green {
+  background-color: rgb(87, 223, 87);
+}
+.result {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 20vw;
+  height: 14vh;
+  background-color: white;
+  border-radius: 20px;
+  margin: 1vh 1vw;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.result::-webkit-scrollbar {
+  display: none;
+}
+.res {
+  margin: 4vw 0.5vw;
+  font-family: monospace;
+  color: #2d2d2d;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: text;
+}
+.button {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 58vh;
+  width: 21vw;
+}
+button,
+input {
+  box-sizing: border-box;
+  border-width: 0;
+  margin: 0.4vw;
+  border-radius: 200px;
+  padding: 0;
+  font-size: larger;
+  font-weight: 600;
+  text-align: center;
+  height: 9vh;
+  width: 4vw;
+}
+.fun {
+  background-color: lightgrey;
+}
+.num {
+  background-color: white;
+}
+.is {
+  background-color: orange;
+}
+img {
+  width: 22px;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+@media screen and (max-width: 480px) {
+  .calculator {
+    width: 78vw;
+    height: 80vh;
+  }
+  .button {
+    margin: 2vh;
+
+    height: 60vh;
+    width: 60vw;
+  }
+  button,
+  input {
+    margin: 1vw;
+
+    height: 16vw;
+    width: 16vw;
+  }
+  .result {
+    width: 73vw;
+    height: 14vh;
+
+    margin: 1vh 2.5vw;
+  }
+
+  .res {
+    margin: 15vw 2vw;
+  }
+  .dots {
+    margin-left: 4vw;
+  }
+  .red,
+  .yellow,
+  .green {
+    margin: 1vh 0.8vw;
+  }
+}

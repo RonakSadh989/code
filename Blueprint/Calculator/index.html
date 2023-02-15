@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="main1">
+    <div class="calculator">
+      <div class="dots">
+        <div class="red">.</div>
+        <div class="yellow">.</div>
+        <div class="green">.</div>
+      </div>
+      <div class="result">
+        <div class="res" id="res"></div>
+      </div>
+      <div class="button">
+        <button class="fun" id="btn1" onclick='document.getElementById("res").innerHTML = ``'>
+          C
+        </button>
+        <button class="fun" id="btn1" onclick='document.getElementById("res").innerHTML+=`%`'>
+          %
+        </button>
+        <button class="fun" id="btn1" onclick="back()">
+          <img src="backspace.png" />
+        </button>
+        <button class="fun" id="btn1" onclick='document.getElementById("res").innerHTML+=`/`'>
+          /
+        </button>
+        <button class="num" id="btn" onclick='document.getElementById("res").innerHTML+=7'>
+          7
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=8'>
+          8
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=9'>
+          9
+        </button>
+        <button class="fun" id="btn1" onclick='document.getElementById("res").innerHTML+=`*`'>
+          X
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=4'>
+          4
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=5'>
+          5
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=6'>
+          6
+        </button>
+        <button class="fun" id="btn1" onclick='document.getElementById("res").innerHTML+=`-`'>
+          -
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=1'>
+          1
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=2'>
+          2
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=3'>
+          3
+        </button>
+        <button class="fun" id="btn1" onclick='document.getElementById("res").innerHTML+=`+`'>
+          +
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=00'>
+          00
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=0'>
+          0
+        </button>
+        <button class="num" id="btn1" onclick='document.getElementById("res").innerHTML+=`.`'>
+          .
+        </button>
+        <button class="is" onclick="cal()">=</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

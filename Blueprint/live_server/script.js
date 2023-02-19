@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
-  fs.readFile('/html/Blueprint/live_server/index.html', (err, data) => {
+  fs.readFile('/html/Blueprint/news api/news-home/index.html', (err, data) => {
     if (err) {
       res.statusCode = 500;
       res.end(`Error reading file: ${err}`);

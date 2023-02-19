@@ -1,5 +1,8 @@
-const url =
-  "https://newsapi.org/v2/top-headlines?country=us&apiKey=247218c92d0b40c4b0573fe04571ab7c";
+// const url1 =
+  // "https://newsapi.org/v2/top-headlines?country=us&apiKey=247218c92d0b40c4b0573fe04571ab7c";
+const url = localStorage.getItem("category");
+console.log(url);
+document.getElementById("heading").innerHTML = localStorage.getItem(localStorage.length-1).toUpperCase() +" NEWS"
 async function getnews() {
   try {
     const api = await fetch(url);
@@ -44,7 +47,7 @@ async function newsdata() {
     // <button class="btn1">See more..</button>
     // </p>
     // <img src="${await articles.urlToImage}" alt="" >`;
-    if (des === null) {
+    if (des === null,articles.urlToImage== null ) {
       news.remove();
     }
   }

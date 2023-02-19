@@ -1,121 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../news/btn.css">
- 
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../news/btn.css" />
+  </head>
+  <body>
     <nav>
-        <h2>News</h2>
-        <ul>
-          <li > Home</li>
-          <li><a href="#foot">About</a> </li>
-   
-        </ul>
-      </nav>
- <main>
-    
-    <div class="left">
-        <img src="logo.png" alt="">
-    </div>
-    <div class="right">
+      <img src="assets/logo.png" alt="" />
+
+      <ul>
+        <li>Home</li>
+        <li><a href="#foot">About</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="left">
+        <img src="logo.png" alt="" />
+      </div>
+      <div class="right">
         <h2>abc NEWS</h2>
-        <br> <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A pariatur enim sit tempore id neque, non provident nulla ab obcaecati distinctio optio commodi minima recusandae ipsa voluptatum saepe accusantium? Cumque distinctio praesentium ab labore.</p>
-    </div>
- </main>
+        <br />
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. A pariatur
+          enim sit tempore id neque, non provident nulla ab obcaecati distinctio
+          optio commodi minima recusandae ipsa voluptatum saepe accusantium?
+          Cumque distinctio praesentium ab labore.
+        </p>
+      </div>
+    </main>
 
- <div class="headline">
-
-    <div class="head">
-        <h2 >Top Headline</h2> 
-         <img src="assets/see more.png">
-    </div>
-    <div class="headnews" id="headnews">
+    <div class="headline">
+      <div class="head">
+        <h2>Top Headline</h2>
+        <img src="assets/see more.png" />
+      </div>
+      <div class="headnews" id="headnews">
         <!-- <p id="head1">1</p>
         <img src="assets/more.png" alt="" height="80px">
         <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum fuga, voluptatibus consectetur blanditiis magnam dicta laboriosam commodi aliquid voluptate voluptates eligendi cu..</p> -->
-    </div>
- </div>
-
-   <div class="cate">
-    <div class="h1">
-        <h1>Categories...</h1>
-
-    </div>
-   
-    
-   </div>
-
-      <div class="option">
-        <div class="card">
-            <span class="p">
-            Science <br>
-        News on Science</span>
-        </div>
-        <div class="card card1">
-            <span class="p">
-            Sports <br>
-        News on Science</span>
-        </div>
-        <div class="card card2">
-            <span class="p">
-            Nearby <br>
-        News on Science</span>
-        </div>
-        <div class=" card card3">
-            <span class="p">
-            Tech <br>
-        News on Science</span>
-        </div>
-        <div class="card4 card">
-            <span class="p">
-            Science <br>
-        News on Science</span>
-        </div>
-        <div class="card5 card">
-            <span class="p">
-            Science <br>
-        News on Science</span>
-        </div>
-        <div class="card6 card">
-            <span class="p">
-            Science <br>
-        News on Science</span>
-        </div>
-
       </div>
-     
-  <footer id="foot">
-    <div class="foot">
-
-        <div class="about-us">
-            
-            <div class="about">
-            <h2>About Us</h2><br>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, eos! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse dolor quia omnis officiis qui reprehenderit, similique facere, at quae atque sint provident illo, distinctio impedit soluta quos corporis fugiat quo!
-            </p> </div>
-        
-            <div class="links">
-                <h2>Quick Links</h2><br>
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Github</li>
-                </ul>
-            </div>
-            
-            
-        </div>
-        <hr>
-            <p>Copyright &copy; 2023 All Rights Reserved by Goople.INC</p>
     </div>
-  </footer>
-      <script src="script.js"></script>
-</body>
+
+    <div class="cate">
+      <div class="h1">
+        <h1>Categories...</h1>
+      </div>
+    </div>
+
+    <div class="option">
+      <div
+        class="card science"
+        id="category"
+        onclick="localStorage.setItem(localStorage.length, 'science'), categ()"
+      >
+        <span class="p">
+          Science <br />
+          News on Science</span
+        >
+      </div>
+      <div
+        class="card sport"
+        id=" category"
+        onclick="localStorage.setItem(localStorage.length, 'sport'), categ()"
+      >
+        <span class="p">
+          Sports <br />
+          News on Science</span
+        >
+      </div>
+      <div
+        class="card nearby"
+        id=" category"
+        onclick="localStorage.setItem(localStorage.length, 'near'), categ()"
+      >
+        <span class="p">
+          Nearby <br />
+          News on Science</span
+        >
+      </div>
+      <div
+        class="card tech"
+        id=" category"
+        onclick="localStorage.setItem(localStorage.length, 'tech'), categ()"
+      >
+        <span class="p">
+          Tech <br />
+          News on Science</span
+        >
+      </div>
+      <div class="card4 card">
+        <span class="p">
+          Science <br />
+          News on Science</span
+        >
+      </div>
+      <div class="card5 card">
+        <span class="p">
+          Science <br />
+          News on Science</span
+        >
+      </div>
+      <div class="card6 card">
+        <span class="p">
+          Science <br />
+          News on Science</span
+        >
+      </div>
+    </div>
+
+    <footer id="foot">
+      <div class="foot">
+        <div class="about-us">
+          <div class="about">
+            <h2>About Us</h2>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit,
+              eos! Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Esse dolor quia omnis officiis qui reprehenderit, similique
+              facere, at quae atque sint provident illo, distinctio impedit
+              soluta quos corporis fugiat quo!
+            </p>
+          </div>
+
+          <div class="links">
+            <h2>Quick Links</h2>
+            <br />
+            <ul>
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Github</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p>Copyright &copy; 2023 All Rights Reserved by Goople.INC</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

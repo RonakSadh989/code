@@ -7,15 +7,17 @@
     font-weight: bold;
     font-size: 12px;
     border-radius: 10px;
-    outline: 2px solid #d7d7d7;
+    outline: 2px solid #2c9caf;
     background-color: white;
     transition: all 1000ms;
     overflow: hidden;
     color: #348bbbc2;
     margin: 1vh 1vw;
-}
+    
+  }
+ 
 
-.btn1:hover{
+.btn1:hover {
     color: white;
     transform: scale(1.1);
     outline: 2px solid #70bdca;

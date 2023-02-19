@@ -18,8 +18,8 @@ nav {
 
 }
 ul {
-  display: inline-flex;
-  margin-left: 70%;
+  display: inline;
+  margin-left: 60%;
   list-style-type: none;
 }
 h2{

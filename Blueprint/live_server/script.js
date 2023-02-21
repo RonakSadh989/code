@@ -15,8 +15,8 @@ const requestListener = function (req, res) {
 
   });
 
-server.listen(80, '127.0.0.1', () => {
-  console.log('Server running at http://127.0.0.1:80');
+server.listen(5500, '127.0.0.2', () => {
+  console.log('Server running at http://127.0.0.2:5500');
 });
 
 //terminal code : node "c:\html\Blueprint\live_server\script.js"
